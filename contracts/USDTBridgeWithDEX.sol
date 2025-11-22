@@ -206,7 +206,7 @@ contract USDTBridgeWithDEX is OApp {
      */
     function _estimateETHForUSDT(uint256 usdtAmount) 
         internal 
-        pure  // Changed from 'view' to 'pure'
+        view 
         returns (uint256) 
     {
         // Rough estimate: 1 ETH = $3000, 1 USDT = $1

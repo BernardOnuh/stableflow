@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/USDTBridgeWithDEX.sol": {
-      "lastModificationDate": 1763839130228,
-      "contentHash": "ea8c42d1832b5c0fac5e31bc9acd8460",
+      "lastModificationDate": 1763841843820,
+      "contentHash": "31271b3c3657f0e7a30f9c840145dc0b",
       "sourceName": "contracts/USDTBridgeWithDEX.sol",
       "solcConfig": {
         "version": "0.8.22",
@@ -720,6 +720,194 @@
       ],
       "artifacts": [
         "ILayerZeroReceiver"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1763838144920,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1763838144845,
+      "contentHash": "3ae5166c6827a9cf1a7a462d1632b464",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/mocks/MockERC20.sol": {
+      "lastModificationDate": 1763841333822,
+      "contentHash": "850d79099de4fea22287aa8c09b869ad",
+      "sourceName": "contracts/mocks/MockERC20.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.22"
+      ],
+      "artifacts": [
+        "MockERC20"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/mocks/MockEndpoint.sol": {
+      "lastModificationDate": 1763842517334,
+      "contentHash": "e6aa76c72b2f55c8036a7ffb4e1b36e9",
+      "sourceName": "contracts/mocks/MockEndpoint.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.22"
+      ],
+      "artifacts": [
+        "MockEndpoint"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/mocks/MockSwapRouter.sol": {
+      "lastModificationDate": 1763841364244,
+      "contentHash": "297dbfa4e48ebc33c392e3d0e1bcceef",
+      "sourceName": "contracts/mocks/MockSwapRouter.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.22"
+      ],
+      "artifacts": [
+        "MockSwapRouter"
       ]
     }
   }

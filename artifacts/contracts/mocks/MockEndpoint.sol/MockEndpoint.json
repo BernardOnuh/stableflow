@@ -1,0 +1,219 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockEndpoint",
+  "sourceName": "contracts/mocks/MockEndpoint.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "eid",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mockNativeFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nonce",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint32",
+              "name": "dstEid",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "receiver",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "options",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "payInLzToken",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct MessagingParams",
+          "name": "_params",
+          "type": "tuple"
+        },
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        }
+      ],
+      "name": "quote",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "nativeFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lzTokenFee",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MessagingFee",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint32",
+              "name": "dstEid",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "receiver",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "message",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "options",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "payInLzToken",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct MessagingParams",
+          "name": "_params",
+          "type": "tuple"
+        },
+        {
+          "internalType": "address",
+          "name": "_refundAddress",
+          "type": "address"
+        }
+      ],
+      "name": "send",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "guid",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint64",
+              "name": "nonce",
+              "type": "uint64"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "nativeFee",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "lzTokenFee",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct MessagingFee",
+              "name": "fee",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct MessagingReceipt",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "setDelegate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_fee",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMockFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405266038d7ea4c6800060015534801561001b57600080fd5b5061040f8061002b6000396000f3fe6080604052600436106100705760003560e01c806349ba316e1161004e57806349ba316e146100dd578063affed0e014610101578063ca5eb5e11461013b578063ddc28c581461015957600080fd5b80632637a450146100755780632a7e3f321461009e578063416ecebf146100c0575b600080fd5b6100886100833660046102bc565b6101ad565b604051610095919061030f565b60405180910390f35b3480156100aa57600080fd5b506100be6100b9366004610352565b600155565b005b3480156100cc57600080fd5b5060405161759e8152602001610095565b3480156100e957600080fd5b506100f360015481565b604051908152602001610095565b34801561010d57600080fd5b506000546101229067ffffffffffffffff1681565b60405167ffffffffffffffff9091168152602001610095565b34801561014757600080fd5b506100be61015636600461036b565b50565b34801561016557600080fd5b506101a06101743660046102bc565b505060408051808201825260008082526020918201819052825180840190935260015483529082015290565b604051610095919061038d565b6101b5610258565b6000805467ffffffffffffffff1690806101ce836103a4565b82546101009290920a67ffffffffffffffff818102199093169183160217909155604080516060810182526000805442608084015260c081901b6001600160c01b03191660a08401528351808403608801815260a8840185528051602091820120845294168483015282518084018452600154815293840152908101919091529150505b92915050565b604051806060016040528060008019168152602001600067ffffffffffffffff16815260200161029b604051806040016040528060008152602001600081525090565b905290565b80356001600160a01b03811681146102b757600080fd5b919050565b600080604083850312156102cf57600080fd5b823567ffffffffffffffff8111156102e657600080fd5b830160a081860312156102f857600080fd5b9150610306602084016102a0565b90509250929050565b60006080820190508251825267ffffffffffffffff6020840151166020830152604083015161034b604084018280518252602090810151910152565b5092915050565b60006020828403121561036457600080fd5b5035919050565b60006020828403121561037d57600080fd5b610386826102a0565b9392505050565b815181526020808301519082015260408101610252565b600067ffffffffffffffff8083168181036103cf57634e487b7160e01b600052601160045260246000fd5b600101939250505056fea2646970667358221220876fec7a18c5cc98e1187a04273149edea5aeacb3e7fdda7a2493aee871493f764736f6c63430008160033",
+  "deployedBytecode": "0x6080604052600436106100705760003560e01c806349ba316e1161004e57806349ba316e146100dd578063affed0e014610101578063ca5eb5e11461013b578063ddc28c581461015957600080fd5b80632637a450146100755780632a7e3f321461009e578063416ecebf146100c0575b600080fd5b6100886100833660046102bc565b6101ad565b604051610095919061030f565b60405180910390f35b3480156100aa57600080fd5b506100be6100b9366004610352565b600155565b005b3480156100cc57600080fd5b5060405161759e8152602001610095565b3480156100e957600080fd5b506100f360015481565b604051908152602001610095565b34801561010d57600080fd5b506000546101229067ffffffffffffffff1681565b60405167ffffffffffffffff9091168152602001610095565b34801561014757600080fd5b506100be61015636600461036b565b50565b34801561016557600080fd5b506101a06101743660046102bc565b505060408051808201825260008082526020918201819052825180840190935260015483529082015290565b604051610095919061038d565b6101b5610258565b6000805467ffffffffffffffff1690806101ce836103a4565b82546101009290920a67ffffffffffffffff818102199093169183160217909155604080516060810182526000805442608084015260c081901b6001600160c01b03191660a08401528351808403608801815260a8840185528051602091820120845294168483015282518084018452600154815293840152908101919091529150505b92915050565b604051806060016040528060008019168152602001600067ffffffffffffffff16815260200161029b604051806040016040528060008152602001600081525090565b905290565b80356001600160a01b03811681146102b757600080fd5b919050565b600080604083850312156102cf57600080fd5b823567ffffffffffffffff8111156102e657600080fd5b830160a081860312156102f857600080fd5b9150610306602084016102a0565b90509250929050565b60006080820190508251825267ffffffffffffffff6020840151166020830152604083015161034b604084018280518252602090810151910152565b5092915050565b60006020828403121561036457600080fd5b5035919050565b60006020828403121561037d57600080fd5b610386826102a0565b9392505050565b815181526020808301519082015260408101610252565b600067ffffffffffffffff8083168181036103cf57634e487b7160e01b600052601160045260246000fd5b600101939250505056fea2646970667358221220876fec7a18c5cc98e1187a04273149edea5aeacb3e7fdda7a2493aee871493f764736f6c63430008160033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

@@ -1,0 +1,72 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockSwapRouter",
+  "sourceName": "contracts/mocks/MockSwapRouter.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "tokenIn",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "tokenOut",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee",
+              "type": "uint24"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountIn",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountOutMinimum",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtPriceLimitX96",
+              "type": "uint160"
+            }
+          ],
+          "internalType": "struct MockSwapRouter.ExactInputSingleParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "exactInputSingle",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountOut",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060938061001e6000396000f3fe608060405260043610601c5760003560e01c8063414bf389146021575b600080fd5b6033602c3660046045565b60c0013590565b60405190815260200160405180910390f35b60006101008284031215605757600080fd5b5091905056fea26469706673582212202baf78de6d7d75e2436225f1ecb711a3b67ad00961f848c7d37eb92eb02e288b64736f6c63430008160033",
+  "deployedBytecode": "0x608060405260043610601c5760003560e01c8063414bf389146021575b600080fd5b6033602c3660046045565b60c0013590565b60405190815260200160405180910390f35b60006101008284031215605757600080fd5b5091905056fea26469706673582212202baf78de6d7d75e2436225f1ecb711a3b67ad00961f848c7d37eb92eb02e288b64736f6c63430008160033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
