@@ -1,0 +1,38 @@
+{
+  "name": "stableflow",
+  "version": "1.0.0",
+  "description": "USDT Bridge using LayerZero",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:arbitrum": "hardhat run scripts/deploy.js --network arbitrum",
+    "deploy:base": "hardhat run scripts/deploy.js --network base",
+    "deploy:optimism": "hardhat run scripts/deploy.js --network optimism",
+    "deploy:arb-sepolia": "hardhat run scripts/deploy.js --network arbitrum-sepolia",
+    "deploy:base-sepolia": "hardhat run scripts/deploy.js --network base-sepolia",
+    "configure": "hardhat run scripts/configure.js --network",
+    "test-bridge": "hardhat run scripts/test-bridge.js --network"
+  },
+  "dependencies": {
+    "@layerzerolabs/lz-evm-oapp-v2": "^2.3.3",
+    "@layerzerolabs/lz-evm-protocol-v2": "^3.0.147",
+    "@layerzerolabs/toolbox-hardhat": "^0.6.12",
+    "@openzeppelin/contracts": "^4.9.6",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
+    "chai": "^4.3.7",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.4",
+    "typechain": "^8.2.0"
+  }
+}
