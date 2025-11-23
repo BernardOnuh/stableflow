@@ -1,18 +1,18 @@
 {
   "base-sepolia": {
-    "usdt": "0xFB8C2026977FB4f580D0021D76843325e724Fa04",
-    "bridge": "0x41fFA79190fF1B2127FBf31B359B64392a026C58",
+    "usdt": "0xF19cBB9fe1b1Ae465623a3195CE5A767af171c4D",
+    "bridge": "0xd27467AEBab3Ae27d7FB9Df71F3ab92D02e6E23d",
     "endpoint": "0x6EDCE65403992e310A62460808c4b910D972f10f",
     "chainId": 40245,
     "deployer": "0x22890dfAeD0667723fcD66e34FfB853b4F81f6bd",
-    "timestamp": "2025-11-23T03:00:35.992Z"
+    "timestamp": "2025-11-23T09:53:40.115Z"
   },
   "sepolia": {
-    "usdt": "0x21dE5De8A2b4A7c0f8198ac240403Af7d093179e",
-    "bridge": "0xcCDaC15b8E7C4Aa44b12B3acA6D8469B7a9F970a",
+    "usdt": "0x5271Ba4B4319247Afbb2e63811885648C06dD01A",
+    "bridge": "0xaB1697F5E7793fc9F142C0dB1c4861E85cf09bD0",
     "endpoint": "0x6EDCE65403992e310A62460808c4b910D972f10f",
     "chainId": 40161,
     "deployer": "0x22890dfAeD0667723fcD66e34FfB853b4F81f6bd",
-    "timestamp": "2025-11-23T03:00:25.729Z"
+    "timestamp": "2025-11-23T09:53:25.956Z"
   }
 }
