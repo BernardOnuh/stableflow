@@ -6,7 +6,7 @@ struct MessagingParams {
     uint32 dstEid;
     bytes32 receiver;
     bytes message;
-    bytes options;
+    bytes options; 
     bool payInLzToken;
 }
 
@@ -31,8 +31,8 @@ contract MockEndpoint {
     // Required by OAppSender._lzSend() - THIS IS THE KEY FIX
     // Must match ILayerZeroEndpointV2.send signature exactly
     function send(
-        MessagingParams calldata _params,
-        address _refundAddress
+        MessagingParams calldata /* _params */,
+        address /* _refundAddress */
     ) external payable returns (MessagingReceipt memory) {
         nonce++;
         return MessagingReceipt({
@@ -44,8 +44,8 @@ contract MockEndpoint {
 
     // Required by OAppSender._quote()
     function quote(
-        MessagingParams calldata _params,
-        address _sender
+        MessagingParams calldata /* _params */,
+        address /* _sender */
     ) external view returns (MessagingFee memory) {
         return MessagingFee({nativeFee: mockNativeFee, lzTokenFee: 0});
     }

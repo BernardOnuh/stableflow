@@ -1,0 +1,18 @@
+{
+  "arbitrum": {
+    "bridge": "0x605f03f3cECcfD91A6bf6Eaf2Cb983b8A05D6B26",
+    "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+    "usdt": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+    "chainId": 30110,
+    "deployer": "0x22890dfAeD0667723fcD66e34FfB853b4F81f6bd",
+    "timestamp": "2025-11-22T20:58:33.270Z"
+  },
+  "base": {
+    "bridge": "0x605f03f3cECcfD91A6bf6Eaf2Cb983b8A05D6B26",
+    "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+    "usdt": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
+    "chainId": 30184,
+    "deployer": "0x22890dfAeD0667723fcD66e34FfB853b4F81f6bd",
+    "timestamp": "2025-11-22T20:59:08.125Z"
+  }
+}

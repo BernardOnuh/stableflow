@@ -14,11 +14,13 @@
     "test-bridge": "hardhat run scripts/test-bridge.js --network"
   },
   "dependencies": {
+    "@layerzerolabs/lz-evm-messagelib-v2": "^3.0.147",
     "@layerzerolabs/lz-evm-oapp-v2": "^2.3.3",
     "@layerzerolabs/lz-evm-protocol-v2": "^3.0.147",
     "@layerzerolabs/toolbox-hardhat": "^0.6.12",
     "@openzeppelin/contracts": "^4.9.6",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "solidity-bytes-utils": "^0.8.4"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",

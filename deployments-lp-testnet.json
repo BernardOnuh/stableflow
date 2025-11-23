@@ -1,0 +1,18 @@
+{
+  "base-sepolia": {
+    "usdt": "0xFB8C2026977FB4f580D0021D76843325e724Fa04",
+    "bridge": "0x41fFA79190fF1B2127FBf31B359B64392a026C58",
+    "endpoint": "0x6EDCE65403992e310A62460808c4b910D972f10f",
+    "chainId": 40245,
+    "deployer": "0x22890dfAeD0667723fcD66e34FfB853b4F81f6bd",
+    "timestamp": "2025-11-23T03:00:35.992Z"
+  },
+  "sepolia": {
+    "usdt": "0x21dE5De8A2b4A7c0f8198ac240403Af7d093179e",
+    "bridge": "0xcCDaC15b8E7C4Aa44b12B3acA6D8469B7a9F970a",
+    "endpoint": "0x6EDCE65403992e310A62460808c4b910D972f10f",
+    "chainId": 40161,
+    "deployer": "0x22890dfAeD0667723fcD66e34FfB853b4F81f6bd",
+    "timestamp": "2025-11-23T03:00:25.729Z"
+  }
+}

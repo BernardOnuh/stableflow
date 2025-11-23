@@ -1,18 +1,18 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/USDTBridgeWithDEX.sol": {
-      "lastModificationDate": 1763841843820,
-      "contentHash": "31271b3c3657f0e7a30f9c840145dc0b",
-      "sourceName": "contracts/USDTBridgeWithDEX.sol",
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/BridgeWithLPs.sol": {
+      "lastModificationDate": 1763865092836,
+      "contentHash": "bb74e6d9d0145230901041e611618d5d",
+      "sourceName": "contracts/BridgeWithLPs.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -32,29 +32,66 @@
       "imports": [
         "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OApp.sol",
         "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppSender.sol",
+        "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/libs/OptionsBuilder.sol",
         "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol"
       ],
       "versionPragmas": [
         "^0.8.22"
       ],
       "artifacts": [
-        "ISwapRouter",
-        "USDTBridgeWithDEX"
+        "BridgeWithLPs"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1763864595335,
+      "contentHash": "1535f8c0c68463f8c1b5239f7584e71f",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppSender.sol": {
-      "lastModificationDate": 1763838144361,
+      "lastModificationDate": 1763864594331,
       "contentHash": "8a54c076d80f5711e3511a0bbfcff1a1",
       "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppSender.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -84,17 +121,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OApp.sol": {
-      "lastModificationDate": 1763838144356,
+      "lastModificationDate": 1763864594304,
       "contentHash": "5fff81a48e0699606f1ee7387d4a31a2",
       "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OApp.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -124,17 +161,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1763838144918,
+      "lastModificationDate": 1763864595232,
       "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -159,18 +196,59 @@
         "IERC20"
       ]
     },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/libs/OptionsBuilder.sol": {
+      "lastModificationDate": 1763864594448,
+      "contentHash": "aaba44fdba19c251ddcb7d80c4998e19",
+      "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/libs/OptionsBuilder.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "solidity-bytes-utils/contracts/BytesLib.sol",
+        "@openzeppelin/contracts/utils/math/SafeCast.sol",
+        "@layerzerolabs/lz-evm-protocol-v2/contracts/messagelib/libs/ExecutorOptions.sol",
+        "@layerzerolabs/lz-evm-messagelib-v2/contracts/uln/libs/DVNOptions.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "OptionsBuilder"
+      ]
+    },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
-      "lastModificationDate": 1763838144966,
+      "lastModificationDate": 1763864595345,
       "contentHash": "1b5d667d3740d866eca0352758e59827",
       "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -199,18 +277,57 @@
         "SafeERC20"
       ]
     },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppCore.sol": {
+      "lastModificationDate": 1763864594321,
+      "contentHash": "392cf9b920add3244966148ee8de682a",
+      "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppCore.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./interfaces/IOAppCore.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "OAppCore"
+      ]
+    },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/ILayerZeroEndpointV2.sol": {
-      "lastModificationDate": 1763838768214,
+      "lastModificationDate": 1763864594317,
       "contentHash": "0790766778fa8995935c093d9cf03f84",
       "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/ILayerZeroEndpointV2.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -240,57 +357,18 @@
         "ILayerZeroEndpointV2"
       ]
     },
-    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppCore.sol": {
-      "lastModificationDate": 1763838144358,
-      "contentHash": "392cf9b920add3244966148ee8de682a",
-      "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppCore.sol",
-      "solcConfig": {
-        "version": "0.8.22",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol",
-        "./interfaces/IOAppCore.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "OAppCore"
-      ]
-    },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1763838144794,
+      "lastModificationDate": 1763864594456,
       "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -316,17 +394,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
-      "lastModificationDate": 1763838144921,
+      "lastModificationDate": 1763864595236,
       "contentHash": "525fcdad8d171312933f47baf01d1ed8",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -351,162 +429,18 @@
         "IERC20Permit"
       ]
     },
-    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingComposer.sol": {
-      "lastModificationDate": 1763838768216,
-      "contentHash": "bcc2df90697b23f02303892874f96324",
-      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingComposer.sol",
-      "solcConfig": {
-        "version": "0.8.22",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.8.0"
-      ],
-      "artifacts": [
-        "IMessagingComposer"
-      ]
-    },
-    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessageLibManager.sol": {
-      "lastModificationDate": 1763838768215,
-      "contentHash": "a56a887b2721a98cf82842503bbf0ef0",
-      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessageLibManager.sol",
-      "solcConfig": {
-        "version": "0.8.22",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.8.0"
-      ],
-      "artifacts": [
-        "IMessageLibManager"
-      ]
-    },
-    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingContext.sol": {
-      "lastModificationDate": 1763838768216,
-      "contentHash": "2b8bfa473f049af8c74dffbff0766abf",
-      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingContext.sol",
-      "solcConfig": {
-        "version": "0.8.22",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.8.0"
-      ],
-      "artifacts": [
-        "IMessagingContext"
-      ]
-    },
-    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingChannel.sol": {
-      "lastModificationDate": 1763838768216,
-      "contentHash": "bd92a8f1c9f815025e8e3e676fe40b0d",
-      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingChannel.sol",
-      "solcConfig": {
-        "version": "0.8.22",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.8.0"
-      ],
-      "artifacts": [
-        "IMessagingChannel"
-      ]
-    },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1763838144958,
+      "lastModificationDate": 1763864595321,
       "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -534,17 +468,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/interfaces/IOAppCore.sol": {
-      "lastModificationDate": 1763838144377,
+      "lastModificationDate": 1763864594401,
       "contentHash": "f88e6ddf8ff977739a7178f0d1a276b3",
       "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/interfaces/IOAppCore.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -572,17 +506,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1763838144801,
+      "lastModificationDate": 1763864594670,
       "contentHash": "f07feb4a44b1a4872370da5aa70e8e46",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -607,18 +541,162 @@
         "Context"
       ]
     },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessageLibManager.sol": {
+      "lastModificationDate": 1763864594328,
+      "contentHash": "a56a887b2721a98cf82842503bbf0ef0",
+      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessageLibManager.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "IMessageLibManager"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingComposer.sol": {
+      "lastModificationDate": 1763864594334,
+      "contentHash": "bcc2df90697b23f02303892874f96324",
+      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingComposer.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "IMessagingComposer"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingChannel.sol": {
+      "lastModificationDate": 1763864594331,
+      "contentHash": "bd92a8f1c9f815025e8e3e676fe40b0d",
+      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingChannel.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "IMessagingChannel"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingContext.sol": {
+      "lastModificationDate": 1763864594337,
+      "contentHash": "2b8bfa473f049af8c74dffbff0766abf",
+      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/IMessagingContext.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "IMessagingContext"
+      ]
+    },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppReceiver.sol": {
-      "lastModificationDate": 1763838144359,
+      "lastModificationDate": 1763864594325,
       "contentHash": "3621393509939962dd64af436aa5d131",
       "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppReceiver.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -647,17 +725,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/interfaces/IOAppReceiver.sol": {
-      "lastModificationDate": 1763838144381,
+      "lastModificationDate": 1763864594413,
       "contentHash": "8744fbd8f6967b21443fddfccede3f1e",
       "sourceName": "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/interfaces/IOAppReceiver.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -685,17 +763,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/ILayerZeroReceiver.sol": {
-      "lastModificationDate": 1763838768215,
+      "lastModificationDate": 1763864594322,
       "contentHash": "07bcbc5377578339628265a849de70f5",
       "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/interfaces/ILayerZeroReceiver.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -722,18 +800,240 @@
         "ILayerZeroReceiver"
       ]
     },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/solidity-bytes-utils/contracts/BytesLib.sol": {
+      "lastModificationDate": 1763864617271,
+      "contentHash": "7d64acd21f214069ce975ef79fdeff64",
+      "sourceName": "solidity-bytes-utils/contracts/BytesLib.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0 <0.9.0"
+      ],
+      "artifacts": [
+        "BytesLib"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
+      "lastModificationDate": 1763864595339,
+      "contentHash": "67cf2dfe1d1c22b4ea7f242e8a17f431",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/messagelib/libs/ExecutorOptions.sol": {
+      "lastModificationDate": 1763864594413,
+      "contentHash": "d9e985d1c5d407ba110da010983bcfb6",
+      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/messagelib/libs/ExecutorOptions.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../libs/CalldataBytesLib.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ExecutorOptions"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-messagelib-v2/contracts/uln/libs/DVNOptions.sol": {
+      "lastModificationDate": 1763864738951,
+      "contentHash": "d2b1c66f564862f65b37230b44da37c0",
+      "sourceName": "@layerzerolabs/lz-evm-messagelib-v2/contracts/uln/libs/DVNOptions.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "solidity-bytes-utils/contracts/BytesLib.sol",
+        "@layerzerolabs/lz-evm-protocol-v2/contracts/messagelib/libs/BitMaps.sol",
+        "@layerzerolabs/lz-evm-protocol-v2/contracts/libs/CalldataBytesLib.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "DVNOptions"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/libs/CalldataBytesLib.sol": {
+      "lastModificationDate": 1763864594350,
+      "contentHash": "673ca16094a43c577ed24243c20361aa",
+      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/libs/CalldataBytesLib.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "CalldataBytesLib"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@layerzerolabs/lz-evm-protocol-v2/contracts/messagelib/libs/BitMaps.sol": {
+      "lastModificationDate": 1763864594409,
+      "contentHash": "b2d6a04de0dde1607086d9872aac790e",
+      "sourceName": "@layerzerolabs/lz-evm-protocol-v2/contracts/messagelib/libs/BitMaps.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "BitMaps"
+      ]
+    },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1763838144920,
+      "lastModificationDate": 1763864595234,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -761,17 +1061,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1763838144845,
+      "lastModificationDate": 1763864594918,
       "contentHash": "3ae5166c6827a9cf1a7a462d1632b464",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -800,6 +1100,86 @@
         "ERC20"
       ]
     },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/SimpleBridgeTestnet.sol": {
+      "lastModificationDate": 1763853188082,
+      "contentHash": "d8f92bc71f6bb38f3bb8344fc90e64df",
+      "sourceName": "contracts/SimpleBridgeTestnet.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OApp.sol",
+        "@layerzerolabs/lz-evm-oapp-v2/contracts/oapp/OAppSender.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.22"
+      ],
+      "artifacts": [
+        "SimpleBridgeTestnet"
+      ]
+    },
+    "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/mocks/MockUSDT.sol": {
+      "lastModificationDate": 1763854730104,
+      "contentHash": "8fd10d4d22abcd6f66e8f6276f6d809b",
+      "sourceName": "contracts/mocks/MockUSDT.sol",
+      "solcConfig": {
+        "version": "0.8.22",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.22"
+      ],
+      "artifacts": [
+        "MockUSDT"
+      ]
+    },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/mocks/MockERC20.sol": {
       "lastModificationDate": 1763841333822,
       "contentHash": "850d79099de4fea22287aa8c09b869ad",
@@ -807,11 +1187,11 @@
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -839,17 +1219,17 @@
       ]
     },
     "/Users/bernardo/Desktop/WORK/ETHGLOBAL/stableflow/contracts/mocks/MockEndpoint.sol": {
-      "lastModificationDate": 1763842517334,
-      "contentHash": "e6aa76c72b2f55c8036a7ffb4e1b36e9",
+      "lastModificationDate": 1763864912128,
+      "contentHash": "aa57b6ec2c362cb84afca72a0df3364b",
       "sourceName": "contracts/mocks/MockEndpoint.sol",
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
@@ -881,11 +1261,11 @@
       "solcConfig": {
         "version": "0.8.22",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
-            "enabled": true,
+            "enabled": false,
             "runs": 200
           },
-          "evmVersion": "paris",
           "outputSelection": {
             "*": {
               "*": [
